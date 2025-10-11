@@ -1,4 +1,4 @@
-# bun-react-tailwind-shadcn-template
+# t2c_ux_learn
 
 To install dependencies:
 
@@ -19,4 +19,4 @@ bun start
 ```
 
 This project was created using `bun init` in bun v1.3.0. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
-# t2c_ux_learn
+

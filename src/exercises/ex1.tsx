@@ -1,7 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import { ExHeader } from "@/components/ex-header";
 
 const accordionItems = [
   {
@@ -54,59 +56,70 @@ export function Ex1() {
     setOpenAccordion(value);
   };
   return (
-    <div className="flex flex-col p-4 flex-grow">
-      <div className="flex flex-col gap-2 h-40">
-        <p className="text-xl">
-          Durant el dia 1 aprendrem què és un componend de React, què és JSX i algunes de les seves particularitats.
-        </p>
-        <ul className="flex flex-col gap-2 list-disc list-inside">
-          <li>Per què hem de tancar les etiquetes HTML si l'estàndard de HTML no ho requereix?</li>
-          <li>Per què els components de React comencen per majúscula?</li>
-          <li>Per què els atributs de les etiquetes HTML s'escriuen en camelCase i no en kebab-case (com a l'HTML estàndard)?</li>
-        </ul>
-      </div>
+    <div className="flex flex-col flex-grow">
+      <ExHeader 
+        title="Dia 1 - El component de React" 
+        descriptions={[
+          "Introducció a la peça fonamental de React: el component.",
+          "JSX, el superset de JavaScript que permet barrejar HTML.",
+        ]} 
+        badge="Fonaments de React" 
+      />
       <Separator />
-          
-      <Accordion 
-        type="single" 
-        collapsible 
-        className="w-full flex-grow overflow-y-hidden"
-        value={openAccordion}
-        onValueChange={handleAccordionChange}
-      >
-        {accordionItems.map((item, index) => {
-          const itemId = `item-${index + 1}`;
-          return (
-            <AccordionItem 
-              key={itemId}
-              value={itemId} 
-              className={completedSections.has(itemId) ? "opacity-50" : ""}
-            >
-              <div className="flex items-center space-x-3">
-                <Checkbox 
-                  checked={completedSections.has(itemId)}
-                  onCheckedChange={() => toggleSection(itemId)}
-                  className="shrink-0"
-                />
-                <AccordionTrigger 
-                  className={`text-md font-semibold hover:no-underline ${completedSections.has(itemId) ? "pointer-events-none cursor-default line-through" : ""}`}
+
+      {/* Content container matching max width */}
+      <section className="px-6 py-6 md:py-8">
+        <div className="mx-auto max-w-5xl flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 list-disc list-inside">
+              <li>Per què hem de tancar les etiquetes HTML si l'estàndard de HTML no ho requereix?</li>
+              <li>Per què els components de React comencen per majúscula?</li>
+              <li>Per què els atributs de les etiquetes HTML s'escriuen en camelCase i no en kebab-case?</li>
+            </ul>
+          </div>
+
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="w-full flex-grow overflow-y-hidden"
+            value={openAccordion}
+            onValueChange={handleAccordionChange}
+          >
+            {accordionItems.map((item, index) => {
+              const itemId = `item-${index + 1}`;
+              return (
+                <AccordionItem 
+                  key={itemId}
+                  value={itemId} 
+                  className={completedSections.has(itemId) ? "opacity-50" : ""}
                 >
-                  {item.title}
-                </AccordionTrigger>
-              </div>
-              <AccordionContent>
-                <div className="w-full border rounded-lg overflow-hidden" style={{ height: 'calc(100vh - 300px)', minHeight: '500px' }}>
-                  <iframe
-                    src={item.href}
-                    className="w-full h-full"
-                    title={`${item.title} - React Documentation`}
-                  />
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          );
-        })}
-      </Accordion>
+                  <div className="flex items-center space-x-3">
+                    <Checkbox 
+                      checked={completedSections.has(itemId)}
+                      onCheckedChange={() => toggleSection(itemId)}
+                      className="shrink-0"
+                    />
+                    <AccordionTrigger 
+                      className={`text-md font-semibold hover:no-underline ${completedSections.has(itemId) ? "pointer-events-none cursor-default line-through" : ""}`}
+                    >
+                      {item.title}
+                    </AccordionTrigger>
+                  </div>
+                  <AccordionContent>
+                    <div className="w-full border rounded-lg overflow-hidden" style={{ height: 'calc(100vh - 300px)', minHeight: '500px' }}>
+                      <iframe
+                        src={item.href}
+                        className="w-full h-full"
+                        title={`${item.title} - React Documentation`}
+                      />
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </div>
+      </section>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export function App() {
       disableTransitionOnChange
     >
       <SidebarProvider>
-        <AppSidebar routeGroups={routeGroups} currentPath={currentRoute?.path ?? ""} currentTitle={currentRoute?.title ?? ""} currentGroup={currentGroup?.title ?? ""} currentDescription={currentRoute?.description ?? ""} onNavigate={navigate}>
+        <AppSidebar routeGroups={routeGroups} currentPath={currentRoute?.path ?? ""} currentTitle={currentRoute?.title ?? ""} currentGroup={currentGroup?.title ?? ""} onNavigate={navigate}>
           <CurrentComponent />
         </AppSidebar>
       </SidebarProvider>

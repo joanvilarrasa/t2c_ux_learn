@@ -10,28 +10,27 @@ export type Route = {
   component: React.ComponentType;
   title: string;
   icon?: React.ReactNode;
-  description?: string;
 };
 
 const routeGroups = [
   {
-    title: "Per què React?",
+    title: "Història de la Web",
     routes: [
-      { path: "/exercise0", component: Ex0, title: "Dia 0", description: "Per què fem servir React?" },
+      { path: "/exercise0", component: Ex0, title: "Dia 0" },
     ]
   },
   {
     title: "Fonaments de React",
     routes: [
-      { path: "/exercise1", component: Ex1, title: "Dia 1", description: "Què és un component de React?" },
-      { path: "/exercise2", component: Ex2, title: "Dia 2", description: "L'arbre de React" },
+      { path: "/exercise1", component: Ex1, title: "Dia 1" },
+      { path: "/exercise2", component: Ex2, title: "Dia 2" },
     ]
   },
   {
     title: "Contolar l'estat de les aplicacions",
     routes: [
-      { path: "/exercise3", component: Ex3, title: "Dia 3", description: "TODO" },
-      { path: "/exercise4", component: Ex4, title: "Dia 4", description: "TODO" },
+      { path: "/exercise3", component: Ex3, title: "Dia 3" },
+      { path: "/exercise4", component: Ex4, title: "Dia 4" },
     ]
   },
 ];

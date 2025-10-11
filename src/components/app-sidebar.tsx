@@ -14,12 +14,11 @@ export interface AppSidebarProps {
   currentPath: string;
   currentTitle: string;
   currentGroup: string;
-  currentDescription: string;
   onNavigate: (path: string) => void;
   children: React.ReactNode;
 }
 
-export function AppSidebar({ routeGroups, currentPath, currentTitle, currentGroup, currentDescription, onNavigate, children }: AppSidebarProps) {
+export function AppSidebar({ routeGroups, currentPath, currentTitle, currentGroup, onNavigate, children }: AppSidebarProps) {
   return (
     <>
       <Sidebar>
@@ -46,8 +45,8 @@ export function AppSidebar({ routeGroups, currentPath, currentTitle, currentGrou
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b">
-          <div className="flex items-center gap-2 px-3 w-1/3">
+        <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b">
+          <div className="flex items-center gap-2 px-3">
             <SidebarTrigger />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
@@ -66,10 +65,7 @@ export function AppSidebar({ routeGroups, currentPath, currentTitle, currentGrou
               </BreadcrumbList>
             </Breadcrumb>
           </div>
-          <div className="flex justify-center items-center gap-2 px-3 w-1/3 text-2xl font-bold">
-            <span>{currentDescription ?? ""}</span>
-          </div>
-          <div className="flex justify-end items-center gap-2 px-3 w-1/3">
+          <div className="flex justify-end items-center gap-2 px-3">
             <ThemeToggle />
           </div>
         </header>

@@ -1,30 +1,25 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { ExHeader } from "@/components/ex-header";
 
 const accordionItems = [
   {
     title: "Your First Component",
-    href: "https://react.dev/learn/your-first-component",
-    description: "Learn how to create your first React component.",
+    href: "https://react.dev/learn/your-first-component"
   },
   {
     title: "Importing and Exporting Components",
-    href: "https://react.dev/learn/importing-and-exporting-components",
-    description: "Learn how to import and export components.",
+    href: "https://react.dev/learn/importing-and-exporting-components"
   },
   {
     title: "Writing Markup with JSX",
-    href: "https://react.dev/learn/writing-markup-with-jsx",
-    description: "Learn how to write markup with JSX.",
+    href: "https://react.dev/learn/writing-markup-with-jsx"
   },
   {
     title: "JavaScript in JSX with Curly Braces",
-    href: "https://react.dev/learn/javascript-in-jsx-with-curly-braces",
-    description: "Learn how to use JavaScript in JSX with curly braces.",
+    href: "https://react.dev/learn/javascript-in-jsx-with-curly-braces"
   },
 ];
 
@@ -39,7 +34,6 @@ export function Ex1() {
         newSet.delete(sectionId);
       } else {
         newSet.add(sectionId);
-        // Close the accordion if it's being marked as completed
         if (openAccordion === sectionId) {
           setOpenAccordion("");
         }
@@ -49,7 +43,6 @@ export function Ex1() {
   };
 
   const handleAccordionChange = (value: string) => {
-    // Don't allow opening completed sections
     if (completedSections.has(value)) {
       return;
     }
@@ -58,26 +51,17 @@ export function Ex1() {
   return (
     <div className="flex flex-col flex-grow">
       <ExHeader 
-        title="Dia 1 - El component de React" 
+        title="Dia 1 - React Component" 
         descriptions={[
-          "Introducció a la peça fonamental de React: el component.",
-          "JSX, el superset de JavaScript que permet barrejar HTML.",
+          "Introducció a la peça fonamental de React: el React Component. També veurem JSX, el superset de JavaScript que permet barrejar HTML i JavaScript.",
+          "Aquesta és la peça fonamental de React."
         ]} 
         badge="Fonaments de React" 
       />
       <Separator />
 
-      {/* Content container matching max width */}
       <section className="px-6 py-6 md:py-8">
         <div className="mx-auto max-w-5xl flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <ul className="flex flex-col gap-2 list-disc list-inside">
-              <li>Per què hem de tancar les etiquetes HTML si l'estàndard de HTML no ho requereix?</li>
-              <li>Per què els components de React comencen per majúscula?</li>
-              <li>Per què els atributs de les etiquetes HTML s'escriuen en camelCase i no en kebab-case?</li>
-            </ul>
-          </div>
-
           <Accordion 
             type="single" 
             collapsible 

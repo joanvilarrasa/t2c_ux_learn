@@ -2,7 +2,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { ExHeader } from "@/components/ex-header";
-import { Button } from "@/components/ui/button";
 
 
 export function Ex0() {
@@ -10,9 +9,9 @@ export function Ex0() {
     <div className="flex flex-col flex-grow">
       {/* Hero */}
       <ExHeader
-        title="Dia 0 - De la WWII a Next"
+        title="Dia 0 - Història de la Web"
         descriptions={[
-          "Un viatge cronològic a través de la història del web, des la conceptualització de hypertext fins als frameworks moderns",
+          "Des de les idees de Vannevar Bush post WWII fins a l'actualitat",
         ]}
         badge="Història de la Web"
       />
@@ -31,7 +30,7 @@ export function Ex0() {
               {/* 1945 - As We May Think */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     1945
                   </Badge>
                 </div>
@@ -77,7 +76,7 @@ export function Ex0() {
               {/* 1968 - La Demo */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     1968
                   </Badge>
                 </div>
@@ -111,8 +110,8 @@ export function Ex0() {
               {/* 1989-1990 - Naixement de la World Wide Web */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
-                    1989-1990
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
+                    1989 - 1990
                   </Badge>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -154,7 +153,7 @@ export function Ex0() {
               {/* 1993 - Mosaic */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     1993
                   </Badge>
                 </div>
@@ -220,7 +219,7 @@ export function Ex0() {
               {/* 1995 - JavaScript */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     1995
                   </Badge>
                 </div>
@@ -262,8 +261,8 @@ export function Ex0() {
               {/* 2005 - 2006 - AJAX i jQuery */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
-                    2005-2006
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
+                    2005 - 2006
                   </Badge>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -304,7 +303,7 @@ export function Ex0() {
               {/* 2010 - Backbone.js */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     2010
                   </Badge>
                 </div>
@@ -371,7 +370,7 @@ export function Ex0() {
               {/* 2013 - React */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     2013
                   </Badge>
                 </div>
@@ -411,8 +410,8 @@ export function Ex0() {
               {/* 2017-Present - Meta-frameworks */}
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
-                    2017-Present
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
+                    2017
                   </Badge>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -463,7 +462,7 @@ export function Ex0() {
 
               <div className="relative flex items-center gap-6">
                 <div className="relative flex h-16 w-16 items-center justify-center">
-                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                  <Badge variant="outline" className="font-mono bg-accent text-xl font-bold">
                     -
                   </Badge>
                 </div>
@@ -471,7 +470,7 @@ export function Ex0() {
                   <Card className="ml-4">
                     <CardHeader>
                       <div className="flex items-center gap-3">
-                        <CardTitle className="text-xl">Llegeix més</CardTitle>
+                        <CardTitle className="text-xl">Links</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-3">

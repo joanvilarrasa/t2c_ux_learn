@@ -1,33 +1,25 @@
+import { Separator } from "@/components/ui/separator";
+import { ExHeader } from "@/components/ex-header";
+import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
-import { ExHeader } from "@/components/ex-header";
 
 const accordionItems = [
   {
-    title: "Passing Props to a Component",
-    href: "https://react.dev/learn/passing-props-to-a-component"
+    title: "Extracting State Logic into a Reducer",
+    href: "https://react.dev/learn/extracting-state-logic-into-a-reducer",
   },
   {
-    title: "Conditional Rendering",
-    href: "https://react.dev/learn/conditional-rendering"
+    title: "Passing Data Deeply with Context",
+    href: "https://react.dev/learn/passing-data-deeply-with-context",
   },
   {
-    title: "Rendering Lists",
-    href: "https://react.dev/learn/rendering-lists"
-  },
-  {
-    title: "Keeping Components Pure",
-    href: "https://react.dev/learn/keeping-components-pure"
-  },
-  {
-    title: "Understanding Your UI as a Tree",
-    href: "https://react.dev/learn/understanding-your-ui-as-a-tree"
-  },
+    title: "Scaling Up with Reducer and Context",
+    href: "https://react.dev/learn/scaling-up-with-reducer-and-context",
+  }
 ];
 
-export function Ex2() {
+export function Ex6() {
   const [completedSections, setCompletedSections] = useState<Set<string>>(new Set());
   const [openAccordion, setOpenAccordion] = useState<string>("");
 
@@ -52,24 +44,21 @@ export function Ex2() {
     }
     setOpenAccordion(value);
   };
+  
   return (
     <div className="flex flex-col flex-grow">
       <ExHeader 
-        title="Dia 2 - l'Arbre de React" 
-        descriptions={[
-          "Props, la menera de compartir informació de pares a fills i de fills a pares.",
-          "Renderització condicional, la menera de mostrar o no mostrar un component.",
-          "Pensant en la UI en forma d'arbre (virtual DOM)."
-        ]} 
-        badge="Fonaments de React" 
+        title="Dia 6 - Reducer i Context" 
+        descriptions={["Com escalar quan l'estat es complex o ha de ser present en components distants"]} 
+        badge="React State" 
       />
       <Separator />
 
       <section className="px-6 py-6 md:py-8">
         <div className="mx-auto max-w-5xl flex flex-col gap-4">
-          <Accordion 
-            type="single" 
-            collapsible 
+          <Accordion
+            type="single"
+            collapsible
             className="w-full flex-grow overflow-y-hidden"
             value={openAccordion}
             onValueChange={handleAccordionChange}
@@ -77,18 +66,18 @@ export function Ex2() {
             {accordionItems.map((item, index) => {
               const itemId = `item-${index + 1}`;
               return (
-                <AccordionItem 
+                <AccordionItem
                   key={itemId}
-                  value={itemId} 
+                  value={itemId}
                   className={completedSections.has(itemId) ? "opacity-50" : ""}
                 >
                   <div className="flex items-center space-x-3">
-                    <Checkbox 
+                    <Checkbox
                       checked={completedSections.has(itemId)}
                       onCheckedChange={() => toggleSection(itemId)}
                       className="shrink-0"
                     />
-                    <AccordionTrigger 
+                    <AccordionTrigger
                       className={`text-md font-semibold hover:no-underline ${completedSections.has(itemId) ? "pointer-events-none cursor-default line-through" : ""}`}
                     >
                       {item.title}

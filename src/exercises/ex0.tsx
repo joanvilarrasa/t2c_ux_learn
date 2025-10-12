@@ -395,8 +395,13 @@ export function Ex0() {
                       <p className="text-muted-foreground leading-relaxed text-justify">
                         React inspira un nou paradigma de desenvolupament frontend centrat en components en comptes de en MVC.
                       </p>
-                      <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVwkqqr5mIfqAylEp1WCCbmngvyIvg-4S4mA8ZHxvpbtCarf0aeBmJYv7r0Lfiuwwai_c&usqp=CAU" alt="React" className="w-full h-auto" />
+                      <div className="flex justify-center items-center">
+                        <div className="w-2/3">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVwkqqr5mIfqAylEp1WCCbmngvyIvg-4S4mA8ZHxvpbtCarf0aeBmJYv7r0Lfiuwwai_c&usqp=CAU" alt="React" className="w-full h-auto" />
+                        </div>
+                        <div className="w-1/3">
+                          <img src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" alt="React" className="w-full h-auto" />
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -431,7 +436,7 @@ export function Ex0() {
                         <a className="text-primary" href="https://nextjs.org/">Next.js</a> introdueix Server-Side Rendering (SSR) i hydration intentant portar part de la computació al servidor (com es feia abans) i intentant el camí fàcil de seguir sigui també el que escala.
                       </p>
                       <p className="text-muted-foreground leading-relaxed text-justify">
-                        <a className="text-primary" href="https://svelte.dev/">Svelte</a> per altra banda ofereix una alternativa sense virtual DOM, compila el codi per poder fer el 2-way data binding eficientment. 
+                        <a className="text-primary" href="https://svelte.dev/">Svelte</a> per altra banda ofereix una alternativa sense virtual DOM, compila el codi per poder fer el 2-way data binding eficientment.
                       </p>
                       <p className="text-muted-foreground leading-relaxed text-justify">
                         El propi React també està desenvolupant un <a className="text-primary" href="https://react.dev/learn/react-compiler">compilador</a> per poder "compilar" react a react que no es rerenderitzi tant (en comptes de intentar crear una via fàcil volen arreglar la merda per darrere).
@@ -453,7 +458,48 @@ export function Ex0() {
                     </CardContent>
                   </Card>
                 </div>
-              </div>              
+              </div>
+
+
+              <div className="relative flex items-center gap-6">
+                <div className="relative flex h-16 w-16 items-center justify-center">
+                  <Badge variant="outline" className="font-mono bg-accent text-lg font-bold">
+                    -
+                  </Badge>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <Card className="ml-4">
+                    <CardHeader>
+                      <div className="flex items-center gap-3">
+                        <CardTitle className="text-xl">Llegeix més</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">As We May Think - Vannevar Bush</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://en.wikipedia.org/wiki/Browser_wars#First_Browser_War_(1995%E2%80%932001)">Browser Wars - Wikipedia</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://browser.engineering/history.html">Web Browser Engineering - Pavel Panchekha, Chris Harrelson</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://hypermedia.systems/hypermedia-a-reintroduction/#_a_brief_history_of_hypermedia">Hypermedia Systems - Carson Gross, Adam Stepinski, Deniz Akşimşek</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://deno.com/blog/history-of-javascript">A Brief History of JavaScript - Deno, Ryan Dahl</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://www.youtube.com/watch?v=8pDqJVdNa44">How A Small Team of Developers Created React at Facebook - CultRepo</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://www.youtube.com/watch?v=LB8KwiiUGy0">Node.js: An origin story - CultRepo</a>
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </div>

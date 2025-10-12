@@ -20,7 +20,7 @@ export function ExHeader({ title, descriptions, badge }: ExHeaderProps) {
             <div className="px-6 pt-8 pb-6 md:pt-12 md:pb-10">
                 <div className="mx-auto max-w-4xl text-center">
                     {badge && (
-                        <Badge className="mb-3" variant="secondary">{badge}</Badge>
+                        <Badge className="mb-3 font-bold  text-md" variant="secondary">{badge}</Badge>
                     )}
                     <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
                         {title}

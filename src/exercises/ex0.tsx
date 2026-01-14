@@ -478,6 +478,9 @@ export function Ex0() {
                         <a className="text-primary" href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">As We May Think - Vannevar Bush</a>
                       </p>
                       <p className="text-muted-foreground leading-relaxed text-justify">
+                        <a className="text-primary" href="https://groups.csail.mit.edu/medg/people/psz/Licklider.html">Man-Computer Symbiosis - J. C. R. Licklider</a>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">
                         <a className="text-primary" href="https://en.wikipedia.org/wiki/Browser_wars#First_Browser_War_(1995%E2%80%932001)">Browser Wars - Wikipedia</a>
                       </p>
                       <p className="text-muted-foreground leading-relaxed text-justify">
